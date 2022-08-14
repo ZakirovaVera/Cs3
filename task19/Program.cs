@@ -7,7 +7,14 @@ string strNumber = Console.ReadLine() ?? "";
 bool isParseNum = int.TryParse(strNumber, out int number);
 if (isParseNum == false)
 {
-    Console.WriteLine("Ошибка");
+    Console.WriteLine("Ошибка, не число!");
+    return;
+}
+
+int length = 5;
+if (strNumber.Length != length)
+{
+    Console.WriteLine("Ошибка, число не 5-ти значное!");
     return;
 }
 
